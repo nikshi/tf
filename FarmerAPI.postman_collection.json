@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "1846709c-d49d-4732-8ba3-7dccb16d946f",
+		"name": "FarmerAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Report Own Properties",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n  \t\"contract_numbers\": [\r\n        \"2212222\",\r\n        \"221221\"\r\n    ],\r\n    \"property_numbers\": [\r\n        \"test\",\r\n        \"test1234\"\r\n    ],\r\n    \"owner_p_num\": [\r\n        \"test\",\r\n        \"test3\"\r\n    ],\r\n    \"date\": \"2019-12-15\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/contracts/public/api/reports/rental",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contracts",
+						"public",
+						"api",
+						"reports",
+						"rental"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Contract",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contract\": {\n        \"number\": \"Pr3oba_2C242do77s222n33t431r423act\",\n        \"type\": \"RENTAL\",\n        \"date_start\": \"2018-12-15\",\n        \"date_end\": \"2019-12-15\",\n        \"price\": \"100\"\n    },\n    \"properties\": [\n        {\n            \"number\": \"TE2S22k4ks32423d223432T13125334333\",\n            \"area\": 100,\n            \"letters\": [\n                {\n                    \"name\": \"proba\",\n                    \"phone\": 123456789,\n                    \"personal_number\": 123456789,\n                    \"owned_percentage\": 80\n                },\n                {\n                    \"name\": \"Test Name\",\n                    \"phone\": 123456789,\n                    \"personal_number\": 123456789,\n                    \"owned_percentage\": 20\n                }\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost/contracts/public/api/contracts/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contracts",
+						"public",
+						"api",
+						"contracts",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report Rental Contracts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n  \t\"contract_numbers\": [\r\n        \"2212222\",\r\n        \"221221\"\r\n    ],\r\n    \"property_numbers\": [\r\n        \"test\",\r\n        \"test1234\"\r\n    ],\r\n    \"owner_p_num\": [\r\n        \"test\",\r\n        \"test3\"\r\n    ],\r\n    \"date\": \"2019-12-15\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/contracts/public/api/reports/own",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contracts",
+						"public",
+						"api",
+						"reports",
+						"own"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
